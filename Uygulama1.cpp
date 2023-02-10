@@ -5,19 +5,22 @@ using namespace std;
 int main(){
   char character;
   
-  // Dosyadan okuma işlemi için akış oluşturma
+  // Dosyadan okuma iÅŸlemi iÃ§in akÄ±ÅŸ oluÅŸturma
+	
   ifstream File;  
   File.open("C:\\Users\\Bilgehan Kaplan\\Desktop\\chomar malware.txt");
  
- // Dosya açma hata kontrolü
+ // Dosya aÃ§ma hata kontrolÃ¼
+	
   if(!File) {                    
-     cout << "dosya açılamadı!";
+     cout << "dosya aÃ§Ä±lamadÄ±!";
      exit(1);
   }  
 
   if ( File.is_open() ){
   	
-    // Dosyanın ilk iki bytını yazdırma
+    // DosyanÄ±n ilk iki bytÄ±nÄ± yazdÄ±rma
+	  
     for(int i=0; i<2; i++)
 	{
    		File.get(character);
@@ -25,7 +28,8 @@ int main(){
 	}     
   }
   
-  // Dosyayı kapatma
+  // DosyayÄ± kapatma
+	
   File.close();
 
   return 0;
