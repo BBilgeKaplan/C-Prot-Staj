@@ -9,13 +9,13 @@ using namespace std;
 string directorySample = "C:\\Users\\Bilgehan Kaplan \\Desktop\\chomar malware";
 vector<char> malwareVector;
 
-// Verilen dosyayý byte byte okuyarak, elde ettigi byte'larý bir vectore atama.
+// Verilen dosyayi byte byte okuyarak, elde ettigi byte'lari bir vectore atama.
 vector<char> readFile(string fileName)
 {
     vector<char> result;
     char ch;
     ifstream fin;  
-  fin.open("C:\\Users\\Bilgehan Kaplan\\Desktop\\chomar malware.txt"); // Dosyadan okuma iþlemi için açma
+  fin.open("C:\\Users\\Bilgehan Kaplan\\Desktop\\chomar malware.txt");     // Dosyadan okuma islemi iÃ§in aÃ§ma
   
     while (fin >> noskipws >> ch) {
         result.push_back(ch);
@@ -24,7 +24,7 @@ vector<char> readFile(string fileName)
     return result;
 }
 
-void initializeMalwareVector() //"MALWARE" ifadesini atama
+void initializeMalwareVector()        //"MALWARE" ifadesini atama
 {
     char m0 = 'M';
     char m1 = 'A';
@@ -43,7 +43,7 @@ void initializeMalwareVector() //"MALWARE" ifadesini atama
     malwareVector.push_back(m6);
 }
 
-// Verilen dosya yolunda "MALWARE" ifadesini arayan fonksiyon
+//  Verilen dosya yolunda "MALWARE" ifadesini arayan fonksiyon
 int isContains(vector<char> source, vector<char> find)
 {
     int result = -1;
