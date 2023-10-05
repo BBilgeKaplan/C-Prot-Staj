@@ -21,15 +21,15 @@ vector<string> getFileNameList(string directory)
 
     std::string path = directory;
 
-    for (const auto& entry : fs::directory_iterator(path)) // klasorun icinde gezinme
+    for (const auto& entry : fs::directory_iterator(path))     // klasorun icinde gezinme
     {
-        result.push_back(entry.path().u8string()); // result vector'une bulunan dosyalarý ekleme
+        result.push_back(entry.path().u8string());          // result vector'une bulunan dosyalarÃ½ ekleme
     }
 
     return result;
 }
 
-// Verilen dosyayý byte byte okuyarak, elde ettigi byte'larý bir vectore atama.
+// Verilen dosyayÃ½ byte byte okuyarak, elde ettigi byte'larÃ½ bir vectore atama.
 vector<char> readFile(string fileName)
 {
     vector<char> result;
