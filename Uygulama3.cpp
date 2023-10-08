@@ -23,7 +23,7 @@ vector<string> getFileNameList(string directory)
 
     for (const auto& entry : fs::directory_iterator(path))     // klasorun icinde gezinme
     {
-        result.push_back(entry.path().u8string());          // result vector'une bulunan dosyalarý ekleme
+        result.push_back(entry.path().u8string());          // result vector'une bulunan dosyaları ekleme
     }
 
     return result;
